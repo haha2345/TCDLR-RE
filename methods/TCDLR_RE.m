@@ -1,5 +1,5 @@
-function [Xhat,time,psnr_result,ssim_result,fsim_result,err,iter,mse] = TCDLR_RE(X,p,num,option)
-disp(['#######FTCN########' num2str(num)]);
+function [Xhat,time,psnr_result,ssim_result,fsim_result,err,iter] = TCDLR_RE(X,p,num,option)
+disp(['#######TCDLR_RE########' num2str(num)]);
 
 [n1,n2,n3]=size(X);
 opts.mu = 1e-5;

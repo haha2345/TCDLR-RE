@@ -26,8 +26,8 @@ for n1=[1000,2000,3000,4000]
     j=1; % methods
     for i=1:5 % times
         X=double(I);
-        funcc=str2func (method{j});
-        [Xhat,time,~,~,~,~,~,rank_e] = funcc(X,p,i,option);
+        funcc=str2func(method{j});
+        [Xhat,time,~,~,~,~,~] = funcc(X,p,i,option);
         TIME_(i)=time;
         RSE(i)=norm(Xhat(:)-X(:),'fro')/norm(X(:),'fro');
     end
