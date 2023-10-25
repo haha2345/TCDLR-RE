@@ -27,14 +27,13 @@ for n1=[1000,2000,3000,4000]
     for i=1:5 % times
         X=double(I);
         funcc=str2func(method{j});
-        [Xhat,time,~,~,~,~,~] = funcc(X,p,i,option);
+        [Xhat,time] = funcc(X,p,i,option);
         TIME_(i)=time;
         RSE(i)=norm(Xhat(:)-X(:),'fro')/norm(X(:),'fro');
     end
     p1=round(p*10);
     time_list(p1,r)=mean(TIME_);
     rse_list(p1,r)=mean(RSE);
-    rank_est{p1,r}=rank_e;
 end
 
 

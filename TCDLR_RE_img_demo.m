@@ -19,7 +19,7 @@ for i=1:length(I)% data
         normalize=max(X(:));
         X=X/normalize;
         funcc=str2func(method{j});
-        [Xhat,time,psnr_result,ssim_result,fsim_result] = funcc(X,p,i,option);
+        [Xhat,time,psnr_result] = funcc(X,p,i,option);
         PSNR_(i)=psnr_result;
         TIME_(i)=time;
 end
